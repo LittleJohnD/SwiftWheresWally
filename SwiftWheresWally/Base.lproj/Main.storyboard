@@ -17,22 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-RM-oi7">
-                                <rect key="frame" x="245" y="217" width="110" height="21"/>
+                                <rect key="frame" x="112" y="217" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0y-WO-sis">
-                                <rect key="frame" x="76" y="306" width="93" height="30"/>
-                                <state key="normal" title="Show Last">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showLast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D74-c8-GRk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdS-Yz-hfc">
-                                <rect key="frame" x="244" y="121" width="113" height="30"/>
+                                <rect key="frame" x="111" y="121" width="113" height="30"/>
                                 <state key="normal" title="Add a name">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,17 +31,26 @@
                                     <action selector="addName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVZ-ci-hME"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type name Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-nV-7sF">
-                                <rect key="frame" x="209" y="46" width="183" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-nV-7sF">
+                                <rect key="frame" x="76" y="46" width="183" height="30"/>
                                 <color key="textColor" red="0.40336963383838387" green="0.40336963383838387" blue="0.40336963383838387" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wLd-Wq-6F2"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0y-WO-sis">
+                                <rect key="frame" x="70" y="306" width="93" height="30"/>
+                                <state key="normal" title="Show Last">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D74-c8-GRk"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssm-sA-Xxo">
-                                <rect key="frame" x="414" y="306" width="93" height="30"/>
+                                <rect key="frame" x="171" y="306" width="93" height="30"/>
                                 <state key="normal" title="Show Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,12 +59,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93808502729999999" green="0.98589409719999999" blue="0.4381175853" alpha="0.47999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.99215686274509807" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="lastButton" destination="B0y-WO-sis" id="Sfk-Ff-7E8"/>
+                        <outlet property="lastButton" destination="B0y-WO-sis" id="8BK-1p-FnJ"/>
                         <outlet property="nameEntry" destination="Tjl-nV-7sF" id="cDR-e3-6Yl"/>
-                        <outlet property="showNext" destination="ssm-sA-Xxo" id="Zs7-Du-ZrO"/>
+                        <outlet property="nextButton" destination="ssm-sA-Xxo" id="2e6-bj-Cxj"/>
                         <outlet property="shownName" destination="gZr-RM-oi7" id="vjD-0e-Duh"/>
                     </connections>
                 </viewController>
